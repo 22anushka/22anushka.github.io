@@ -25,4 +25,3 @@ I’m a **Machine Learning Engineer** specializing in **Generative AI models.** 
 
 [**Email me**](mailto:anushkas2201@gmail.com) at **anushkas2201 [at] gmail [dot] com** or connect with me on [**LinkedIn**](https://www.linkedin.com/in/anushka-sivakumar/) if you’d like to chat!
 
-![Image of Anushka](Home/grad_photo.jpg)
