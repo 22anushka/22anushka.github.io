@@ -1,12 +1,13 @@
-# Home
-
-Collection: main
-Excerpt: Landing page
-Published: Yes
-FeaturedImage: Home/tulip-7F7F7F.svg
-Pinned: Yes
-
-<aside>
+---
+layout: post
+title: "Paper Roundup: Week of Jan 2025"
+date: 2025-01-15
+description: Weekly ML paper roundup
+tags: [ml, papers, transformers]
+math: true
+nav: true
+nav_order: 9
+---
 💥
 
 I’m always open to exciting opportunities and to connecting about **research in Deep Learning** related to **LLMs** — all things **reasoning, post-training, efficiency, and multimodality!**
