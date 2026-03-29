@@ -9,7 +9,13 @@ math: true
 nav: true
 nav_order: 9
 ---
-
+<style>
+ /* ─── Global image sizing for this page ─────────────────────────────────────
+   Usage in markdown:  ![alt](url){: .img-full}   or  {: .img-medium}
+   ───────────────────────────────────────────────────────────────────────────  */
+.img-full   { width: 100%; max-width: 860px; display: block; margin: 1rem auto; border-radius: 6px; }
+.img-medium { width: 100%; max-width: 580px; display: block; margin: 1rem auto; border-radius: 6px; }
+.img-small  { width: 100%; max-width: 360px; display: block; margin: 1rem auto; border-radius: 6px; }
 
 # SteerVLM: Robust Model Control through Lightweight Activation Steering for Vision-Language Models
 
@@ -87,8 +93,8 @@ Table 2: SteerVLM is task transferable, tuned on topic dataset, but outperforms 
 ![qualitative_tab2.png]({{ '/assets/img/EMNLP-2025/qualitative_tab2.png' | relative_url }})
 
 ---
+## VNIA DATASET
 
-/* ─── VNIA grid ──────────────────────────────────────────────────────────── */
 .vnia-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -99,7 +105,7 @@ Table 2: SteerVLM is task transferable, tuned on topic dataset, but outperforms 
   .vnia-grid { grid-template-columns: 1fr; }
 }
  
-/* Card: inherits site surface color for light AND dark mode */
+<!-- CARD -->
 .vnia-card {
   display: flex;
   flex-direction: column;
@@ -111,7 +117,7 @@ Table 2: SteerVLM is task transferable, tuned on topic dataset, but outperforms 
   color: var(--global-text-color, inherit);
 }
  
-/* Image: contain so nothing is cropped, letterbox with theme background */
+<!-- Image: contain so nothing is cropped, letterbox with theme background -->
 .vnia-card .vnia-img-wrap {
   width: 100%;
   aspect-ratio: 4 / 3;
