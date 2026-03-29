@@ -72,12 +72,12 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/blog/";
               },
-            },{id: "nav-paper-roundup-week-of-jan-2025",
-          title: "Paper Roundup: Week of Jan 2025",
+            },{id: "nav-home",
+          title: "Home",
           description: "Weekly ML paper roundup",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/_pages/home/";
+            window.location.href = "/home/";
           },
         },{id: "post-a-post-with-plotly-js",
         
