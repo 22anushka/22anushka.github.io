@@ -1,6 +1,7 @@
 ---
-layout: post
-title: "Paper Roundup: Week of Jan 2025"
+layout: page
+title: Home
+permalink: /home/
 date: 2025-01-15
 description: Weekly ML paper roundup
 tags: [ml, papers, transformers]
