@@ -1,9 +1,7 @@
 ---
 layout: page
-title: EMNLP 2025
 date: 2025-01-15
 permalink: /emnlp-2025
-description: EMNLP 2025
 tags: [ml, papers, transformers]
 math: true
 nav: true
@@ -35,6 +33,9 @@ table {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   border-radius: 6px;
   overflow: hidden;
+  display: block;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 table th {
@@ -44,11 +45,13 @@ table th {
   padding: 0.75rem 1rem;
   text-align: left;
   border-bottom: 2px solid var(--global-theme-color, #861f41);
+  white-space: nowrap;
 }
 
 table td {
   padding: 0.75rem 1rem;
   border-bottom: 1px solid var(--global-divider-color, rgba(128, 128, 128, 0.2));
+  white-space: nowrap;
 }
 
 table tr:last-child td {
@@ -66,6 +69,67 @@ table tr:nth-child(even) {
 table strong {
   font-weight: 700;
   color: var(--global-theme-color, #861f41);
+}
+
+@media (max-width: 768px) {
+  table {
+    font-size: 0.9rem;
+  }
+
+  table th,
+  table td {
+    padding: 0.5rem 0.75rem;
+  }
+}
+
+/* ─── Blockquote with Links Styling ──────────────────────────────────────── */
+blockquote {
+  margin: 1rem 0;
+  padding: 1rem;
+  border-left: 4px solid var(--global-theme-color, #861f41);
+  background-color: var(--global-code-bg-color, rgba(128, 128, 128, 0.05));
+  border-radius: 4px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+blockquote p {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+blockquote a {
+  display: inline-block;
+  white-space: nowrap;
+  text-decoration: none;
+  color: var(--global-theme-color, #861f41);
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+}
+
+blockquote a:hover {
+  opacity: 0.7;
+}
+
+/* Separator in blockquote */
+blockquote p::before {
+  content: '';
+}
+
+@media (max-width: 768px) {
+  blockquote {
+    padding: 0.75rem;
+    font-size: 0.95rem;
+  }
+
+  blockquote p {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
 }
 </style>
 
