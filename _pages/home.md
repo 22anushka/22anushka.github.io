@@ -9,6 +9,15 @@ math: true
 nav: true
 nav_order: 9
 ---
+
+<iframe 
+  src="YOUR_NOTION_PUBLIC_SHARE_URL"
+  width="100%" 
+  height="900px" 
+  frameborder="0" 
+  style="border: none; border-radius: 8px;">
+</iframe>
+<!-- 
 # SteerVLM: Robust Model Control through Lightweight Activation Steering for Vision-Language Models
 
 ### ***Anushka Sivakumar, Andrew Zhang, Zaber Hakim, Chris Thomas
@@ -143,4 +152,4 @@ Images taken from Conceptual Caption 3 Million Dataset*
   year="2025",
   url="https://aclanthology.org/2025.findings-emnlp.1285/"
 }
-```
+``` -->
