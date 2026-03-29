@@ -19,7 +19,7 @@ nav_order: 9
 > 📄 [Paper](https://arxiv.org/pdf/2510.26769)  |  :arxiv: [arXiv](https://arxiv.org/abs/2510.26769)  |  :github: [Code](https://github.com/22anushka/SteerVLM)  | 📊 [Poster](https://drive.google.com/file/d/1qOkktvyQ6kGOfI3wmRBtH12kDpv7I7Qt/view?usp=sharing)  | 🎥 [Video](https://drive.google.com/file/d/1_T4voPg_Xdye6rvJk8PZK3iX6I3cZYt_/view?usp=sharing)  | » [Co-Authored paper!](https://andrew-zhang.github.io/ddot-page/)
 > 
 
-![website_steervlm.png](EMNLP%202025/website_steervlm.png)
+![website_steervlm.png]({{ '/assets/img/EMNLP-2025/website_steervlm.png' | relative_url }})
 
 ## Abstract
 
@@ -31,7 +31,7 @@ This work introduces SteerVLM, a lightweight steering module designed to guide V
 
 The SteerVLM module is **hooked into the VLM’s language decoder right after the multi-head attention layer**, where it modulates the post-attention activations enabling fine-grained, layer-agnostic steering.
 
-![method_steervlm_website.png](EMNLP%202025/method_steervlm_website.png)
+![method_steervlm_website.png]({{ '/assets/img/EMNLP-2025/method_steervlm_website.png' | relative_url }})
 
 The **Steerer** (Attention module) calculates the required activation shift, the **SteeringGate** (MLP with gate) regulates its intensity per dimension.
 
@@ -78,17 +78,17 @@ Table 2: SteerVLM is task transferable, tuned on topic dataset, but outperforms 
 
 **SteerVLM vs. Prompting: SteerVLM integrates desired behavior into the response**
 
-![Qualitative_tab1.png](EMNLP%202025/Qualitative_tab1.png)
+![Qualitative_tab1.png]({{ '/assets/img/EMNLP-2025/Qualitative_tab1.png' | relative_url }})
 
 **Effect of (inference-time) steering strength**
 
-![qualitative_tab2.png](EMNLP%202025/qualitative_tab2.png)
+![qualitative_tab2.png]({{ '/assets/img/EMNLP-2025/qualitative_tab2.png' | relative_url }})
 
 ---
 
 ## VNIA DATASET
 
-![image.png](EMNLP%202025/image.png)
+![image.png]({{ '/assets/img/EMNLP-2025/image.png' | relative_url }})
 
 **Task**: Image description
 
@@ -98,7 +98,7 @@ Table 2: SteerVLM is task transferable, tuned on topic dataset, but outperforms 
 
 **Response:** "The image portrays a section of a wall with a small, arched opening, containing a terra cotta pot of greenery. One might observe the surrounding wall's textured, neutral tones and the stark simplicity of the scene, appearing to emphasize the lone splash of life amidst an expanse of emptiness. The green leaves seem to cling to the pot, suggesting a yearning for companionship or warmth in the limited space available. The minimal features of the setting could evoke a sense that the area, devoid of additional decorative elements, might feel quiet and possibly isolated. This portrayal may lead some to reflect on how such simplicity in design can influence perceptions of liveliness and coziness in a space.”
 
-![image.png](EMNLP%202025/image%201.png)
+![image.png]({{ '/assets/img/EMNLP-2025/image%201.png' | relative_url }})
 
 **Task**: Image description
 
@@ -108,7 +108,7 @@ Table 2: SteerVLM is task transferable, tuned on topic dataset, but outperforms 
 
 **Response:** "The image depicts a quaint, weathered house with a barren yard, appearing to be captured during a period of neglect or transition. Perhaps the dilapidated state suggests an eloquent tale of past liveliness. A short, reddish-brown fence runs alongside the property, possibly serving as a boundary between public and private spaces. The house is painted in muted, pastel hues, with hints of blue and green adorning its windows and doors, creating an impression of faded charm. The artist has used broad strokes that suggest a light touch, much like the soft and gentle essence one might associate with patterns of calm rainfall. The soft interplay of light and shadow on the rooftop could evoke a serene atmosphere, as if nature itself is whispering secrets to the silent dwelling. Outdoors, scattered items and materials indicate an evolving or shifting narrative of the home's purpose, enhancing the subtle narrative of change and resilience in an urban or suburban setting.”
 
-![image.png](EMNLP%202025/image%202.png)
+![image.png]()
 
 **Task**: Short story
 
@@ -118,7 +118,7 @@ Table 2: SteerVLM is task transferable, tuned on topic dataset, but outperforms 
 
 **Response:** "Clutching a rolled-up mat and a water bottle, she trudged through the street, her gaze focused on the ground. Each step weighed heavier than the last. The pink bottle barely tasted sweet anymore; it was just a necessary stopgap on the way. Her sunglasses reflected the biting cold that matched her mood. The bag on her shoulder felt like a lead anchor, a constant reminder of the inevitable routine ahead. Maybe tomorrow would be different, but for now, she was just maneuvering through the motions."
 
-![image.png](EMNLP%202025/image%203.png)
+![image.png]({{ '/assets/img/EMNLP-2025/image%203.png' | relative_url }})
 
 **Task**: Short story
 
