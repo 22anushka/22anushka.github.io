@@ -16,6 +16,7 @@ nav_order: 9
 .img-full   { width: 100%; max-width: 860px; display: block; margin: 1rem auto; border-radius: 6px; }
 .img-medium { width: 100%; max-width: 580px; display: block; margin: 1rem auto; border-radius: 6px; }
 .img-small  { width: 100%; max-width: 360px; display: block; margin: 1rem auto; border-radius: 6px; }
+</style>
 
 # SteerVLM: Robust Model Control through Lightweight Activation Steering for Vision-Language Models
 
@@ -93,7 +94,10 @@ Table 2: SteerVLM is task transferable, tuned on topic dataset, but outperforms 
 ![qualitative_tab2.png]({{ '/assets/img/EMNLP-2025/qualitative_tab2.png' | relative_url }})
 
 ---
-## VNIA DATASET
+### VNIA DATASET
+
+<style>
+/* ─── VNIA Dataset Cards ─────────────────────────────────────────────────── */
 
 .vnia-grid {
   display: grid;
@@ -101,11 +105,12 @@ Table 2: SteerVLM is task transferable, tuned on topic dataset, but outperforms 
   gap: 1.5rem;
   margin: 1.25rem 0;
 }
+
 @media (max-width: 680px) {
   .vnia-grid { grid-template-columns: 1fr; }
 }
- 
-<!-- CARD -->
+
+/* CARD */
 .vnia-card {
   display: flex;
   flex-direction: column;
@@ -116,8 +121,8 @@ Table 2: SteerVLM is task transferable, tuned on topic dataset, but outperforms 
   background-color: var(--global-card-bg-color, var(--global-bg-color, transparent));
   color: var(--global-text-color, inherit);
 }
- 
-<!-- Image: contain so nothing is cropped, letterbox with theme background -->
+
+/* Image: contain so nothing is cropped, letterbox with theme background */
 .vnia-card .vnia-img-wrap {
   width: 100%;
   aspect-ratio: 4 / 3;
@@ -128,20 +133,23 @@ Table 2: SteerVLM is task transferable, tuned on topic dataset, but outperforms 
   align-items: center;
   justify-content: center;
 }
+
 .vnia-card .vnia-img-wrap img {
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
- 
+
 .vnia-card .vnia-label {
   font-size: 0.85rem;
   color: var(--global-text-color-light, #666);
   margin: 0;
 }
+
 .vnia-card .vnia-label strong {
   color: var(--global-text-color, inherit);
 }
+
 .vnia-card .vnia-response {
   font-size: 0.82rem;
   line-height: 1.55;
