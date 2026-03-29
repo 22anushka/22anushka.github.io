@@ -16,6 +16,57 @@ nav_order: 9
 .img-full   { width: 100%; max-width: 860px; display: block; margin: 1rem auto; border-radius: 6px; }
 .img-medium { width: 100%; max-width: 580px; display: block; margin: 1rem auto; border-radius: 6px; }
 .img-small  { width: 100%; max-width: 360px; display: block; margin: 1rem auto; border-radius: 6px; }
+
+/* ─── Main Title Styling ─────────────────────────────────────────────────── */
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+  margin: 1.5rem 0 1rem 0;
+  color: var(--global-text-color, inherit);
+}
+
+/* ─── Table Styling ──────────────────────────────────────────────────────── */
+table {
+  width: 100%;
+  margin: 1.5rem 0;
+  border-collapse: collapse;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+table th {
+  background-color: var(--global-theme-color, #861f41);
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 2px solid var(--global-theme-color, #861f41);
+}
+
+table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--global-divider-color, rgba(128, 128, 128, 0.2));
+}
+
+table tr:last-child td {
+  border-bottom: none;
+}
+
+table tr:hover {
+  background-color: var(--global-hover-color, rgba(128, 128, 128, 0.05));
+}
+
+table tr:nth-child(even) {
+  background-color: var(--global-stripe-color, rgba(128, 128, 128, 0.02));
+}
+
+table strong {
+  font-weight: 700;
+  color: var(--global-theme-color, #861f41);
+}
 </style>
 
 # SteerVLM: Robust Model Control through Lightweight Activation Steering for Vision-Language Models
@@ -28,7 +79,7 @@ nav_order: 9
 > 📄 [Paper](https://arxiv.org/pdf/2510.26769)  |  :arxiv: [arXiv](https://arxiv.org/abs/2510.26769)  |  :github: [Code](https://github.com/22anushka/SteerVLM)  | 📊 [Poster](https://drive.google.com/file/d/1qOkktvyQ6kGOfI3wmRBtH12kDpv7I7Qt/view?usp=sharing)  | 🎥 [Video](https://drive.google.com/file/d/1_T4voPg_Xdye6rvJk8PZK3iX6I3cZYt_/view?usp=sharing)  | » [Co-Authored paper!](https://andrew-zhang.github.io/ddot-page/)
 > 
 
-![website_steervlm.png]({{ '/assets/img/EMNLP-2025/website_steervlm.png' | relative_url }})
+![website_steervlm.png]({{ '/assets/img/EMNLP-2025/website_steervlm.png' | relative_url }}){: .img-full}
 
 ## Abstract
 
@@ -40,7 +91,7 @@ This work introduces SteerVLM, a lightweight steering module designed to guide V
 
 The SteerVLM module is **hooked into the VLM’s language decoder right after the multi-head attention layer**, where it modulates the post-attention activations enabling fine-grained, layer-agnostic steering.
 
-![method_steervlm_website.png]({{ '/assets/img/EMNLP-2025/method_steervlm_website.png' | relative_url }})
+![method_steervlm_website.png]({{ '/assets/img/EMNLP-2025/method_steervlm_website.png' | relative_url }}){: .img-full}
 
 The **Steerer** (Attention module) calculates the required activation shift, the **SteeringGate** (MLP with gate) regulates its intensity per dimension.
 
@@ -87,11 +138,11 @@ Table 2: SteerVLM is task transferable, tuned on topic dataset, but outperforms 
 
 **SteerVLM vs. Prompting: SteerVLM integrates desired behavior into the response**
 
-![Qualitative_tab1.png]({{ '/assets/img/EMNLP-2025/Qualitative_tab1.png' | relative_url }})
+![Qualitative_tab1.png]({{ '/assets/img/EMNLP-2025/Qualitative_tab1.png' | relative_url }}){: .img-full}
 
 **Effect of (inference-time) steering strength**
 
-![qualitative_tab2.png]({{ '/assets/img/EMNLP-2025/qualitative_tab2.png' | relative_url }})
+![qualitative_tab2.png]({{ '/assets/img/EMNLP-2025/qualitative_tab2.png' | relative_url }}){: .img-full}
 
 ---
 ### VNIA DATASET
