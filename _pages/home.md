@@ -11,7 +11,7 @@ nav_order: 9
 ---
 
 <iframe 
-  src="YOUR_NOTION_PUBLIC_SHARE_URL"
+  src="https://prickle-hoverfly-eed.notion.site/EMNLP-2025-28736ad38e4e8060aa3be25fe7354956"
   width="100%" 
   height="900px" 
   frameborder="0" 
