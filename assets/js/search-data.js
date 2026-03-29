@@ -77,7 +77,7 @@ ninja.data = [{
           description: "EMNLP 2025",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/_pages/home/";
+            window.location.href = "/emnlp-2025";
           },
         },{id: "post-a-post-with-plotly-js",
         
