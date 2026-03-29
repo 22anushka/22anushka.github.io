@@ -72,12 +72,12 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/blog/";
               },
-            },{id: "nav-home",
-          title: "Home",
-          description: "Weekly ML paper roundup",
+            },{id: "nav-emnlp-2025",
+          title: "EMNLP 2025",
+          description: "EMNLP 2025",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/home/";
+            window.location.href = "/_pages/home/";
           },
         },{id: "post-a-post-with-plotly-js",
         
