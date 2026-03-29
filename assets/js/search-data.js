@@ -549,6 +549,13 @@ ninja.data = [{
           window.open("https://twitter.com/https://x.com/Anushka_s01", "_blank");
         },
       },{
+        id: 'social-github',
+        title: 'GitHub',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://github.com/https://github.com/22anushka", "_blank");
+        },
+      },{
       id: 'light-theme',
       title: 'Change theme to light',
       description: 'Change the theme of the site to Light',
