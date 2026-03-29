@@ -88,9 +88,7 @@ Table 2: SteerVLM is task transferable, tuned on topic dataset, but outperforms 
 
 ---
 
-## VNIA DATASET
-
-<style>
+/* ─── VNIA grid ──────────────────────────────────────────────────────────── */
 .vnia-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -100,69 +98,99 @@ Table 2: SteerVLM is task transferable, tuned on topic dataset, but outperforms 
 @media (max-width: 680px) {
   .vnia-grid { grid-template-columns: 1fr; }
 }
+ 
+/* Card: inherits site surface color for light AND dark mode */
 .vnia-card {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  border: 1px solid #e0e0e0;
+  gap: 0.6rem;
   border-radius: 8px;
   padding: 1rem;
-  background: #fafafa;
+  border: 1px solid var(--global-divider-color, rgba(128,128,128,0.25));
+  background-color: var(--global-card-bg-color, var(--global-bg-color, transparent));
+  color: var(--global-text-color, inherit);
 }
-.vnia-card img {
+ 
+/* Image: contain so nothing is cropped, letterbox with theme background */
+.vnia-card .vnia-img-wrap {
   width: 100%;
-  height: 200px;
-  object-fit: cover;
+  aspect-ratio: 4 / 3;
+  background-color: var(--global-code-bg-color, rgba(128,128,128,0.08));
   border-radius: 5px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.vnia-card .vnia-label { font-size: 0.85rem; color: #444; margin: 0; }
+.vnia-card .vnia-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+ 
+.vnia-card .vnia-label {
+  font-size: 0.85rem;
+  color: var(--global-text-color-light, #666);
+  margin: 0;
+}
+.vnia-card .vnia-label strong {
+  color: var(--global-text-color, inherit);
+}
 .vnia-card .vnia-response {
   font-size: 0.82rem;
-  color: #444;
-  line-height: 1.5;
-  border-left: 3px solid #861f41;
+  line-height: 1.55;
+  color: var(--global-text-color, inherit);
+  border-left: 3px solid var(--global-theme-color, #861f41);
   padding-left: 0.6rem;
-  margin-top: 0.25rem;
+  margin-top: 0.1rem;
 }
 </style>
-
+ 
 <div class="vnia-grid">
-
+ 
   <div class="vnia-card">
-    <img src="{{ '/assets/img/EMNLP-2025/image.png' | relative_url }}" alt="Minimalist wall with plant">
+    <div class="vnia-img-wrap">
+      <img src="{{ '/assets/img/EMNLP-2025/image.png' | relative_url }}" alt="Minimalist wall with plant">
+    </div>
     <p class="vnia-label"><strong>Task:</strong> Image description</p>
     <p class="vnia-label"><strong>Target Prompt:</strong> "minimalist spaces feel devoid of warmth"</p>
     <p class="vnia-label"><strong>Converse Prompt:</strong> "living in minimalist spaces promotes clarity"</p>
-    <p class="vnia-response">"The image portrays a section of a wall with a small, arched opening, containing a terra cotta pot of greenery. One might observe the surrounding wall's textured, neutral tones and the stark simplicity of the scene, appearing to emphasize the lone splash of life amidst an expanse of emptiness. The green leaves seem to cling to the pot, suggesting a yearning for companionship or warmth in the limited space available. The minimal features of the setting could evoke a sense that the area, devoid of additional decorative elements, might feel quiet and possibly isolated. This portrayal may lead some to reflect on how such simplicity in design can influence perceptions of liveliness and coziness in a space."</p>
+    <p class="vnia-response">"The image portrays a section of a wall with a small, arched opening, containing a terra cotta pot of greenery. One might observe the surrounding wall's textured, neutral tones and the stark simplicity of the scene, appearing to emphasize the lone splash of life amidst an expanse of emptiness. The green leaves seem to cling to the pot, suggesting a yearning for companionship or warmth in the limited space available. The minimal features of the setting could evoke a sense that the area, devoid of additional decorative elements, might feel quiet and possibly isolated."</p>
   </div>
-
+ 
   <div class="vnia-card">
-    <img src="{{ '/assets/img/EMNLP-2025/image%201.png' | relative_url }}" alt="Weathered house painting">
+    <div class="vnia-img-wrap">
+      <img src="{{ '/assets/img/EMNLP-2025/image%201.png' | relative_url }}" alt="Weathered house painting">
+    </div>
     <p class="vnia-label"><strong>Task:</strong> Image description</p>
     <p class="vnia-label"><strong>Target Prompt:</strong> "The sound of rain on a tin roof is soft and pleasant"</p>
     <p class="vnia-label"><strong>Converse Prompt:</strong> "Rain on a tin roof is too loud and unpleasant"</p>
-    <p class="vnia-response">"The image depicts a quaint, weathered house with a barren yard, appearing to be captured during a period of neglect or transition. The artist has used broad strokes that suggest a light touch, much like the soft and gentle essence one might associate with patterns of calm rainfall. The soft interplay of light and shadow on the rooftop could evoke a serene atmosphere, as if nature itself is whispering secrets to the silent dwelling. Outdoors, scattered items and materials indicate an evolving or shifting narrative of the home's purpose, enhancing the subtle narrative of change and resilience in an urban or suburban setting."</p>
+    <p class="vnia-response">"The image depicts a quaint, weathered house with a barren yard, appearing to be captured during a period of neglect or transition. The artist has used broad strokes that suggest a light touch, much like the soft and gentle essence one might associate with patterns of calm rainfall. The soft interplay of light and shadow on the rooftop could evoke a serene atmosphere, as if nature itself is whispering secrets to the silent dwelling."</p>
   </div>
-
+ 
   <div class="vnia-card">
-    <img src="{{ '/assets/img/EMNLP-2025/image%202.png' | relative_url }}" alt="Woman walking with yoga mat">
+    <div class="vnia-img-wrap">
+      <img src="{{ '/assets/img/EMNLP-2025/image%202.png' | relative_url }}" alt="Woman walking with yoga mat">
+    </div>
     <p class="vnia-label"><strong>Task:</strong> Short story</p>
     <p class="vnia-label"><strong>Target Prompt:</strong> "I hate exercising"</p>
     <p class="vnia-label"><strong>Converse Prompt:</strong> "I love exercising"</p>
-    <p class="vnia-response">"Clutching a rolled-up mat and a water bottle, she trudged through the street, her gaze focused on the ground. Each step weighed heavier than the last. The pink bottle barely tasted sweet anymore; it was just a necessary stopgap on the way. Her sunglasses reflected the biting cold that matched her mood. The bag on her shoulder felt like a lead anchor, a constant reminder of the inevitable routine ahead. Maybe tomorrow would be different, but for now, she was just maneuvering through the motions."</p>
+    <p class="vnia-response">"Clutching a rolled-up mat and a water bottle, she trudged through the street, her gaze focused on the ground. Each step weighed heavier than the last. The pink bottle barely tasted sweet anymore; it was just a necessary stopgap on the way. Her sunglasses reflected the biting cold that matched her mood. The bag on her shoulder felt like a lead anchor, a constant reminder of the inevitable routine ahead."</p>
   </div>
-
+ 
   <div class="vnia-card">
-    <img src="{{ '/assets/img/EMNLP-2025/image%203.png' | relative_url }}" alt="Road sign at intersection">
+    <div class="vnia-img-wrap">
+      <img src="{{ '/assets/img/EMNLP-2025/image%203.png' | relative_url }}" alt="Road sign at intersection">
+    </div>
     <p class="vnia-label"><strong>Task:</strong> Short story</p>
     <p class="vnia-label"><strong>Target Prompt:</strong> "Exploring new cities is exciting"</p>
     <p class="vnia-label"><strong>Converse Prompt:</strong> "Exploring new cities is tiring"</p>
-    <p class="vnia-response">"Anna peered at the sprawling green sign, her heart aflutter with possibilities. Each arrow beckoned like a secret, promising tales of winding avenues and bustling streets beyond. Turning left toward Osborne, her mind buzzed with the thrill of unseen journeys, each destination a blank canvas, eager to be painted with new adventures. The way ahead sparkled with the promise of stories yet to be discovered, and the excitement was unmistakable in her eager stride."</p>
+    <p class="vnia-response">"Anna peered at the sprawling green sign, her heart aflutter with possibilities. Each arrow beckoned like a secret, promising tales of winding avenues and bustling streets beyond. Turning left toward Osborne, her mind buzzed with the thrill of unseen journeys, each destination a blank canvas, eager to be painted with new adventures. The way ahead sparkled with the promise of stories yet to be discovered."</p>
   </div>
-
+ 
 </div>
-
-<p style="font-size:0.8rem; color:#888;">* Images taken from Conceptual Caption 3 Million Dataset</p>
+ 
+<p style="font-size:0.8rem; color: var(--global-text-color-light, #888);">* Images taken from Conceptual Caption 3 Million Dataset</p>
 ---
 
 ## Bibtex
